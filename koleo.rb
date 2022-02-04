@@ -21,12 +21,13 @@ while (command!= "EXIT")
   elsif separated_words[0]=="DELETE"
       dictionary.delete(separated_words[1])
   elsif separated_words[0]=="COUNT"
-     if dictionary.has_value?(separated_words[1])
-       puts dictionary.key(separated_words[1])
+     if dictionary.value?(separated_words[1])
+       #puts dictionary.key(separated_words[1])
+       puts dictionary.values.count(separated_words[1])
      else 
        puts 0
      end
-  
+ 
   end  
 end   
 
