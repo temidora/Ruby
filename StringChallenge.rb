@@ -1,35 +1,26 @@
+#program want you to type a string, prints a string without "N" and replaces "M" by a character before
 def StringChallenge(str)
 
-  # code goes here
- str ="MrtyNNgMM"
+ #string str converts to array my_list with " " at the beggining in case first letter is "M"  
  my_list=Array.new
  my_list= str.split("")
  new_word=" "
+  
+ for i in 0..str.length-1
  
- #puts my_list
- for i in 0..str.length
-
-  if my_list[i] =="N"
-  elsif my_list[i]=="M"
-      #new_word.insert(new_word.length,my_list[i-1])
-     
-      new_word<<new_word[-1] 
-      #puts new_word
-  else 
-    #new_word.insert(new_word.length, my_list[i])
-    #puts my_list[i]
-    new_word<<my_list[i]
-    #puts new_word
-  end
+    if my_list[i] =="N" 
+    elsif my_list[i]=="M"
+        new_word+=new_word[-1] 
+    else 
+      new_word+=my_list[i]
+    end 
  
  end
-puts new_word.strip
-puts new_word
+#delete all whitespaces
+new_word=new_word.strip
 return new_word
- #puts new_word
- #return new_word
 end
-
-# keep this function call here 
+#call a function
+puts "Type a string"
 puts StringChallenge(STDIN.gets)
 #puts StringChallenge("MrtyNNgMM")
