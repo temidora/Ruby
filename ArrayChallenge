@@ -1,20 +1,24 @@
 def ArrayChallenge(strArr)
 
   # code goes here
-power=0  
+power=0
 base=2
-index=0
+is_symmetric=true
 
-loop
-power+=1
-
-
-
-
-
-  return strArr
-
+  while is_symmetric==true do
+    
+    for i in 0...base**(power-1)
+        if strArr[base**power -1 +i]== strArr[base**(power+1)- 2-i]
+        
+        else is_symmetric=false
+            break
+        end    
+      power+=1
+    end 
+  
+  return is_symmetric
+  
+  end
 end
-
 # keep this function call here 
 puts ArrayChallenge(STDIN.gets)
