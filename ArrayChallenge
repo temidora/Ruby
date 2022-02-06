@@ -1,0 +1,20 @@
+def ArrayChallenge(strArr)
+
+  # code goes here
+power=0  
+base=2
+index=0
+
+loop
+power+=1
+
+
+
+
+
+  return strArr
+
+end
+
+# keep this function call here 
+puts ArrayChallenge(STDIN.gets)
