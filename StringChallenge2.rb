@@ -1,4 +1,5 @@
 # the function StringChallenge takes the str parameter and return the smalest number of the reduction method, only the letters a,b,c will be given in str and two different chars are taken and replaced with the 3rd ex: "ac"-> "b" but "aa" can't be replaced. The function is done repeatedly until the string can't be further reducted and outputs the length of string
+#example: str="cab" "ca" is reduced to "b" , so "cab"->"bb" , and "bb" is unreductable
 def StringChallenge(str)
 i=0
   while i<str.length-1
